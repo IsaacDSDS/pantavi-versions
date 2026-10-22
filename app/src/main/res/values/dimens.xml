@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">16dp</dimen>
+    <dimen name="space_l">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="space_xxl">48dp</dimen>
+
+    <dimen name="safe_horizontal">48dp</dimen>
+    <dimen name="safe_vertical">27dp</dimen>
+
+    <dimen name="radius_card">20dp</dimen>
+    <dimen name="radius_artwork">16dp</dimen>
+    <dimen name="radius_pill">24dp</dimen>
+
+    <dimen name="icon_hero">96dp</dimen>
+    <dimen name="icon_control">32dp</dimen>
+    <dimen name="artwork_size">280dp</dimen>
+    <dimen name="step_badge">32dp</dimen>
+    <dimen name="loader_size">64dp</dimen>
+    <dimen name="status_dot">10dp</dimen>
+    <dimen name="progress_height">4dp</dimen>
+    <dimen name="card_max_width">640dp</dimen>
+</resources>

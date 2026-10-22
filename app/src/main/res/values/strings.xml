@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Pantavi</string>
+    <string name="subtitle">Compatible with AirPlay</string>
+
+    <string name="status_starting">Starting receiver…</string>
+    <string name="status_ready">Ready for AirPlay</string>
+    <string name="status_connected">Connected to %1$s</string>
+    <string name="status_mirroring">Mirroring %1$s</string>
+    <string name="status_streaming">Playing video from %1$s</string>
+    <string name="status_audio">Playing from %1$s</string>
+    <string name="status_error_discovery">Can\'t announce the receiver on the network</string>
+    <string name="status_error_server">Can\'t start the AirPlay server</string>
+    <string name="status_error_unknown">The receiver stopped unexpectedly</string>
+
+    <string name="how_to_title">How to connect</string>
+    <string name="step_network">Connect your iPhone, iPad or Mac to the same network as this TV.</string>
+    <string name="step_ios">iPhone or iPad: open Control Center and tap Screen Mirroring, or tap AirPlay on a video.</string>
+    <string name="step_mac">Mac: open Control Center and click Screen Mirroring, or use the AirPlay menu.</string>
+    <string name="step_choose">Choose “%1$s”.</string>
+
+    <string name="network_info">%1$s · port %2$d</string>
+    <string name="network_none">No network connection</string>
+
+    <string name="banner_connecting">%1$s is connecting…</string>
+    <string name="client_unknown">a device</string>
+    <string name="client_unknown_start">A device</string>
+    <string name="audio_source">AirPlay · %1$s</string>
+    <string name="track_unknown">Unknown title</string>
+
+    <string name="stream_loading">Loading video from %1$s…</string>
+    <string name="playback_hint">OK pause  ·  ← → 10 s  ·  Back stop</string>
+
+    <string name="plan_free">Free version · 1080p · 15-minute sessions</string>
+    <string name="plan_free_remaining">Free version · %1$s left in this session</string>
+    <string name="free_timer">Free · %1$s left</string>
+    <string name="plan_pro">Pantavi Pro · up to 4K · no time limit</string>
+    <string name="status_free_limit">Free session ended · Pro has no time limit</string>
+    <string name="pro_button_get">Get Pro</string>
+    <string name="pro_button_active">Pro active</string>
+    <string name="overlay_permission_button">Allow Pantavi to open by itself</string>
+
+    <string name="pro_title">Pantavi Pro</string>
+    <string name="pro_subtitle">One payment. No subscription, no ads.</string>
+    <string name="pro_benefits_title">With Pro you get</string>
+    <string name="pro_benefit_time">Screen mirroring and videos with no time limit</string>
+    <string name="pro_benefit_quality">Screen mirroring up to 4K in H.265 at 60 fps</string>
+    <string name="pro_benefit_video">Videos from Safari, YouTube and other apps in up to 4K</string>
+    <string name="pro_get">Get Pro on Google Play</string>
+    <string name="pro_how">Pro is a separate app on Google Play, “Pantavi Pro”. Install it and Pantavi unlocks by itself.</string>
+    <string name="pro_active_title">Pantavi Pro is active</string>
+    <string name="pro_active_text">Thanks for supporting Pantavi.</string>
+    <string name="pro_limit_title">Your 15 free minutes are up</string>
+    <string name="pro_limit_subtitle">Install Pantavi Pro to keep watching with no time limit. One payment, no subscription, no ads.</string>
+    <string name="pro_store_error">Couldn\'t open Google Play on this TV.</string>
+
+    <string name="licenses_button">Licenses &amp; source code</string>
+    <string name="licenses_version">Version %1$s</string>
+    <string name="licenses_copyright">Pantavi © 2026 Isaac Benavides. It includes software from the authors listed below.</string>
+    <string name="licenses_notice">Pantavi is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License, version 3. It is distributed WITHOUT ANY WARRANTY, without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. The full license text is below.</string>
+    <string name="licenses_source">Source code of this version: %1$s</string>
+    <string name="licenses_trademark">AirPlay is a trademark of Apple Inc. Pantavi is not affiliated with, sponsored or endorsed by Apple. The Pantavi name and logo are not covered by the GPL.</string>
+    <string name="licenses_components">Third-party components</string>
+    <string name="licenses_texts">License texts</string>
+    <string name="licenses_hint">↑ ↓ scroll  ·  ← → page  ·  Back return</string>
+
+    <string name="notification_channel">Receiver</string>
+    <string name="notification_text">Waiting for AirPlay devices</string>
+</resources>

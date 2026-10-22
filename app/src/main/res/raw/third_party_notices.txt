@@ -1,0 +1,16 @@
+UxPlay 1.74 (AirPlay protocol core) - GPL-3.0
+  (c) F. Duncanh and the UxPlay contributors; (c) 2019 dsafa22 and Florian Draschbacher (RPiPlay);
+  (c) 2011-2018 Juho Vähä-Herttua (shairplay, LGPL-2.1+); (c) 2020 Jaslo Ziska;
+  (c) 2026 kgbook (mdnsd, LGPL-2.1+). https://github.com/FDH2/UxPlay
+  Modified: mdnsd/dnssd_mdnsd.c sets a unique mDNS host label on Android.
+playfair (FairPlay key exchange) - GPL-3.0
+csrp - MIT - (c) 2010, 2013 Tom Cocagne
+llhttp - MIT - (c) 2018 Fedor Indutny
+libplist - LGPL-2.1+ - (c) Nikias Bassen, Jonathan Beck, Zach C., Martin Szulecki, Joshua Hill.
+  https://github.com/libimobiledevice/libplist
+jsmn (in libplist) - MIT - (c) 2010 Serge A. Zaitsev
+time64 (in libplist) - MIT - (c) 2007-2010 Michael G Schwern
+Apple Lossless (ALAC) decoder - Apache-2.0 - (c) 2011 Apple Inc.
+OpenSSL 3.5.4 (libcrypto) - Apache-2.0 - (c) The OpenSSL Project Authors
+AndroidX and Media3 1.8.0 (ExoPlayer) - Apache-2.0 - (c) The Android Open Source Project
+Kotlin standard library and kotlinx.coroutines - Apache-2.0 - (c) JetBrains s.r.o. and contributors

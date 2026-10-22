@@ -1,0 +1,6 @@
+alac c38887c (2016-05-11 06:30:08 +0000) — https://github.com/macosforge/alac
+
+License: every source file here (*.c, *.cpp, *.h) carries the Apache License 2.0 header
+(@APPLE_APACHE_LICENSE_HEADER_START@), and that is the license that applies to them.
+APPLE_LICENSE.txt (Apple Public Source License 2.0) was copied from the root of the upstream
+repository; it does not cover any of the files in this directory.

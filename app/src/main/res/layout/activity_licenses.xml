@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The hint sits below the scrolling text, never over it. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <!-- Focusable with no focusable children: the remote's arrows scroll it. -->
+    <ScrollView
+        android:id="@+id/licenses_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:defaultFocusHighlightEnabled="false"
+        android:focusable="true"
+        android:paddingStart="@dimen/safe_horizontal"
+        android:paddingTop="@dimen/safe_vertical"
+        android:paddingEnd="@dimen/safe_horizontal">
+
+        <LinearLayout
+            android:id="@+id/licenses_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/licenses_button"
+                android:textAppearance="@style/TextAppearance.AirCast.Headline" />
+
+            <TextView
+                android:id="@+id/licenses_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                tools:text="Versión 1.0.0" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:text="@string/licenses_copyright"
+                android:textAppearance="@style/TextAppearance.AirCast.Body"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:text="@string/licenses_notice"
+                android:textAppearance="@style/TextAppearance.AirCast.Body" />
+
+            <TextView
+                android:id="@+id/licenses_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:textAppearance="@style/TextAppearance.AirCast.Body"
+                android:textColor="@color/accent"
+                tools:text="@string/licenses_source" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:text="@string/licenses_trademark"
+                android:textAppearance="@style/TextAppearance.AirCast.Body" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xl"
+                android:text="@string/licenses_components"
+                android:textAppearance="@style/TextAppearance.AirCast.Title" />
+
+            <TextView
+                android:id="@+id/licenses_components"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s"
+                android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                android:textColor="@color/text_secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xl"
+                android:text="@string/licenses_texts"
+                android:textAppearance="@style/TextAppearance.AirCast.Title" />
+
+            <!-- One block per license text, added in code from res/raw. -->
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        style="@style/Widget.AirCast.Banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/space_m"
+        android:layout_marginEnd="@dimen/safe_horizontal"
+        android:layout_marginBottom="@dimen/safe_vertical"
+        android:text="@string/licenses_hint" />
+</LinearLayout>

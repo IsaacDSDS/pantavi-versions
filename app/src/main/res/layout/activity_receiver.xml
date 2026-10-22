@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!-- Mirrored screen: always present so a surface exists before the first frame arrives. -->
+    <com.isaacbenavides.aircast.shared.ui.AspectRatioFrameLayout
+        android:id="@+id/video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <SurfaceView
+            android:id="@+id/video_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.isaacbenavides.aircast.shared.ui.AspectRatioFrameLayout>
+
+    <!-- Waiting for a client -->
+    <LinearLayout
+        android:id="@+id/idle_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/safe_horizontal"
+        android:paddingTop="@dimen/safe_vertical"
+        android:paddingEnd="@dimen/safe_horizontal"
+        android:paddingBottom="@dimen/safe_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/space_xxl">
+
+            <ImageView
+                android:layout_width="@dimen/icon_hero"
+                android:layout_height="@dimen/icon_hero"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_brand" />
+
+            <TextView
+                android:id="@+id/receiver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAppearance="@style/TextAppearance.AirCast.Display"
+                tools:text="Smart TV" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="@string/subtitle"
+                android:textAppearance="@style/TextAppearance.AirCast.Body" />
+
+            <TextView
+                android:id="@+id/status_pill"
+                style="@style/Widget.AirCast.StatusPill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xl"
+                tools:text="@string/status_ready" />
+
+            <TextView
+                android:id="@+id/network_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                tools:text="192.168.10.8 · puerto 7000" />
+
+            <TextView
+                android:id="@+id/plan_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                tools:text="@string/plan_free" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pro_button"
+                    style="@style/Widget.AirCast.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pro_button_get" />
+
+                <TextView
+                    android:id="@+id/licenses_button"
+                    style="@style/Widget.AirCast.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:text="@string/licenses_button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/overlay_permission_button"
+                style="@style/Widget.AirCast.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:text="@string/overlay_permission_button"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Widget.AirCast.Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_l"
+                android:text="@string/how_to_title"
+                android:textAppearance="@style/TextAppearance.AirCast.Headline" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Widget.AirCast.StepBadge"
+                    android:text="1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_weight="1"
+                    android:text="@string/step_network"
+                    android:textAppearance="@style/TextAppearance.AirCast.Body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Widget.AirCast.StepBadge"
+                    android:text="2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_weight="1"
+                    android:text="@string/step_ios"
+                    android:textAppearance="@style/TextAppearance.AirCast.Body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Widget.AirCast.StepBadge"
+                    android:text="3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_weight="1"
+                    android:text="@string/step_mac"
+                    android:textAppearance="@style/TextAppearance.AirCast.Body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Widget.AirCast.StepBadge"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/step_choose"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AirCast.Body"
+                    tools:text="@string/step_choose" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Audio-only AirPlay (music, podcasts) -->
+    <LinearLayout
+        android:id="@+id/audio_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/safe_horizontal"
+        android:paddingTop="@dimen/safe_vertical"
+        android:paddingEnd="@dimen/safe_horizontal"
+        android:paddingBottom="@dimen/safe_vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/artwork"
+            android:layout_width="@dimen/artwork_size"
+            android:layout_height="@dimen/artwork_size"
+            android:background="@drawable/bg_artwork"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_xxl"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/audio_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AirCast.Label"
+                android:textColor="@color/accent"
+                tools:text="AirPlay · iPhone" />
+
+            <TextView
+                android:id="@+id/track_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAppearance="@style/TextAppearance.AirCast.Display"
+                tools:text="Song title" />
+
+            <TextView
+                android:id="@+id/track_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AirCast.Title"
+                tools:text="Artist" />
+
+            <TextView
+                android:id="@+id/track_album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AirCast.Body"
+                tools:text="Album" />
+
+            <ProgressBar
+                android:id="@+id/track_progress"
+                style="@style/Widget.AirCast.Progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xl"
+                android:max="1000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/track_elapsed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                    tools:text="1:02" />
+
+                <TextView
+                    android:id="@+id/track_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                    tools:text="3:45" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- AirPlay video loading: opaque, under the controls and banners -->
+    <LinearLayout
+        android:id="@+id/stream_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="@dimen/loader_size"
+            android:layout_height="@dimen/loader_size"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/accent" />
+
+        <TextView
+            android:id="@+id/stream_loader_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            android:gravity="center"
+            android:maxWidth="@dimen/card_max_width"
+            android:textAppearance="@style/TextAppearance.AirCast.Title"
+            tools:text="Loading video from Isaac's iPhone…" />
+    </LinearLayout>
+
+    <!-- AirPlay video controls for the TV remote -->
+    <LinearLayout
+        android:id="@+id/playback_bar"
+        style="@style/Widget.AirCast.PlaybackBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/safe_horizontal"
+        android:layout_marginEnd="@dimen/safe_horizontal"
+        android:layout_marginBottom="@dimen/safe_vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/playback_icon"
+                android:layout_width="@dimen/icon_control"
+                android:layout_height="@dimen/icon_control"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_pause" />
+
+            <TextView
+                android:id="@+id/playback_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_m"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AirCast.Title"
+                tools:text="@string/status_streaming" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_l"
+                android:text="@string/playback_hint"
+                android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/playback_progress"
+            style="@style/Widget.AirCast.Progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:max="1000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playback_elapsed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                android:textColor="@color/text_secondary"
+                tools:text="1:02" />
+
+            <TextView
+                android:id="@+id/playback_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AirCast.Caption"
+                android:textColor="@color/text_secondary"
+                tools:text="12:45" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/connection_banner"
+        style="@style/Widget.AirCast.Banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/safe_vertical"
+        android:visibility="gone"
+        tools:text="iPhone is connecting…"
+        tools:visibility="visible" />
+
+    <!-- Free version: time left in the session, over the video. -->
+    <TextView
+        android:id="@+id/free_timer"
+        style="@style/Widget.AirCast.Banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="@dimen/safe_vertical"
+        android:layout_marginEnd="@dimen/safe_horizontal"
+        android:visibility="gone"
+        tools:text="Free · 14:32 left"
+        tools:visibility="visible" />
+</FrameLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/safe_horizontal"
+    android:paddingTop="@dimen/safe_vertical"
+    android:paddingEnd="@dimen/safe_horizontal"
+    android:paddingBottom="@dimen/safe_vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/space_xxl">
+
+        <ImageView
+            android:layout_width="@dimen/icon_hero"
+            android:layout_height="@dimen/icon_hero"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_brand" />
+
+        <TextView
+            android:id="@+id/pro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            android:text="@string/pro_title"
+            android:textAppearance="@style/TextAppearance.AirCast.Display" />
+
+        <TextView
+            android:id="@+id/pro_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="@string/pro_subtitle"
+            android:textAppearance="@style/TextAppearance.AirCast.Body" />
+
+        <TextView
+            android:id="@+id/pro_get_button"
+            style="@style/Widget.AirCast.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xl"
+            android:text="@string/pro_get" />
+
+        <TextView
+            android:id="@+id/pro_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            android:text="@string/pro_how"
+            android:textAppearance="@style/TextAppearance.AirCast.Caption"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/Widget.AirCast.Card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_l"
+            android:text="@string/pro_benefits_title"
+            android:textAppearance="@style/TextAppearance.AirCast.Headline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Widget.AirCast.StepBadge"
+                android:text="✓" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_m"
+                android:layout_weight="1"
+                android:text="@string/pro_benefit_time"
+                android:textAppearance="@style/TextAppearance.AirCast.Body" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Widget.AirCast.StepBadge"
+                android:text="✓" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_m"
+                android:layout_weight="1"
+                android:text="@string/pro_benefit_quality"
+                android:textAppearance="@style/TextAppearance.AirCast.Body" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Widget.AirCast.StepBadge"
+                android:text="✓" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_m"
+                android:layout_weight="1"
+                android:text="@string/pro_benefit_video"
+                android:textAppearance="@style/TextAppearance.AirCast.Body" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

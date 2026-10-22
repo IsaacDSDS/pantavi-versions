@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Brand glyph: a phone sending its picture to a TV. Deliberately unlike Apple's AirPlay logo
+     (no screen-with-triangle). scripts/render_banner.swift draws the same geometry. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- TV -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M9,8h30a4,4 0,0 1,4 4v18a4,4 0,0 1,-4 4H9a4,4 0,0 1,-4 -4V12a4,4 0,0 1,4 -4z"
+        android:strokeWidth="3"
+        android:strokeColor="@color/accent"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M17,40h14"
+        android:strokeWidth="3"
+        android:strokeColor="@color/accent"
+        android:strokeLineCap="round" />
+    <!-- phone -->
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M14,13h4a2,2 0,0 1,2 2v12a2,2 0,0 1,-2 2h-4a2,2 0,0 1,-2 -2V15a2,2 0,0 1,2 -2z" />
+    <!-- signal -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M24.2,17.2a5,5 0,0 1,0 7.6M27.4,13.3a10,10 0,0 1,0 15.4"
+        android:strokeWidth="2.5"
+        android:strokeColor="@color/accent"
+        android:strokeLineCap="round" />
+</vector>

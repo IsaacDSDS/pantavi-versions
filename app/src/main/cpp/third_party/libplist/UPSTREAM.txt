@@ -1,0 +1,1 @@
+libplist fe3dc34 (2026-09-30 01:37:53 +0200) — https://github.com/libimobiledevice/libplist
